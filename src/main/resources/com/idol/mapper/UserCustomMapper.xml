@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.idol.mapper.UserCustomMapper" >
+  
+  <!-- 查询age小于某个值的所有人,并根据age排序 -->
+	<select id="queryAllUserByAgeOrdered" resultType="com.idol.pojo.User" 
+										 parameterType="java.lang.Integer" >
+	    select 
+	    	id, name, age, password
+	    from 
+	    	user
+	    where age &lt; #{age, jdbcType=INTEGER}
+	    order by age
+	</select>
+</mapper>

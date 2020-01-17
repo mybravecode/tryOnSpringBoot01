@@ -1,0 +1,13 @@
+
+
+# 忽略maven配置
+*.mvn
+
+# 忽略settings配置
+*.settings
+
+*.classpath
+
+*.project
+
+*mvnw*
